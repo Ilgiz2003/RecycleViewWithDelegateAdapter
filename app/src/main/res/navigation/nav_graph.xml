@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactsFragment">
+
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.contactsapp.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts">
+        <action
+            android:id="@+id/action_contactsFragment_to_additionFragment"
+            app:destination="@id/additionFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_editingFragment"
+            app:destination="@id/editingFragment" />
+    </fragment>
+
+    <argument
+        android:name="name"
+        app:argType="string" />
+    <argument
+        android:name="number"
+        app:argType="string" />
+
+    <fragment
+        android:id="@+id/additionFragment"
+        android:name="com.contactsapp.AdditionFragment"
+        android:label="fragment_addition"
+        tools:layout="@layout/fragment_addition">
+        <action
+            android:id="@+id/action_additionFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editingFragment"
+        android:name="com.contactsapp.EditingFragment"
+        android:label="fragment_editing"
+        tools:layout="@layout/fragment_editing">
+        <action
+            android:id="@+id/action_editingFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+    </fragment>
+</navigation>

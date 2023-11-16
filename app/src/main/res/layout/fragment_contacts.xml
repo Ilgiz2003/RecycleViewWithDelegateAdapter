@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ContactsFragment">
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/deleteBtn"
+       style="@style/Widget.MaterialComponents.Button.Icon"
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:layout_marginTop="16dp"
+       android:backgroundTint="@color/teal_200"
+       app:cornerRadius="40dp"
+       app:icon="@drawable/ic_delete"
+       android:paddingStart="14dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/addBtn"
+       style="@style/Widget.MaterialComponents.Button.Icon"
+       android:layout_width="120dp"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="24dp"
+       android:backgroundTint="@color/teal_200"
+       android:text="Добавить"
+       app:cornerRadius="10dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent" />
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/cancelBtn"
+       style="@style/Widget.MaterialComponents.Button.Icon"
+       android:layout_width="120dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="32dp"
+       android:layout_marginBottom="24dp"
+       android:backgroundTint="@color/teal_200"
+       android:text="Отменить"
+       android:visibility="invisible"
+       app:cornerRadius="10dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent" />
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/confirmBtn"
+       style="@style/Widget.MaterialComponents.Button.Icon"
+       android:layout_width="120dp"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="32dp"
+       android:layout_marginBottom="24dp"
+       android:backgroundTint="@color/teal_200"
+       android:text="Удалить"
+       android:visibility="invisible"
+       app:cornerRadius="10dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginBottom="8dp"
+       android:paddingBottom="4dp"
+       app:layout_constraintBottom_toTopOf="@+id/addBtn"
+       app:layout_constraintTop_toBottomOf="@+id/deleteBtn"
+       tools:listitem="@layout/contact_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
